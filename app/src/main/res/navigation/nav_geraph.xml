@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_geraph"
+    app:startDestination="@id/loginScreenFragment">
+
+    <fragment
+        android:id="@+id/loginScreenFragment"
+        android:name="com.udacity.shoestore.ui.LoginScreenFragment"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreenFragment_to_welcomeBoardingFragment"
+            app:destination="@id/welcomeBoardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeBoardingFragment"
+        android:name="com.udacity.shoestore.ui.WelcomeBoardingFragment"
+        android:label="fragment_welcome_boarding"
+        tools:layout="@layout/fragment_welcome_boarding" >
+        <argument
+            android:name="names"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_welcomeBoardingFragment_to_instructionSscreenFragment"
+            app:destination="@id/instructionSscreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionSscreenFragment"
+        android:name="com.udacity.shoestore.ui.InstructionSscreenFragment"
+        android:label="fragment_instruction_sscreen"
+        tools:layout="@layout/fragment_instruction_sscreen" >
+        <action
+            android:id="@+id/action_instructionSscreenFragment_to_shoeListingScreenFragment"
+            app:destination="@id/shoeListingScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeListingScreenFragment"
+        android:name="com.udacity.shoestore.ui.ShoeListingScreenFragment"
+        android:label="fragment_shoe_listing_screen"
+        tools:layout="@layout/fragment_shoe_listing_screen" >
+        <action
+            android:id="@+id/action_shoeListingScreenFragment_to_shoeDetailAddingNewShoeFragment"
+            app:destination="@id/shoeDetailAddingNewShoeFragment" />
+        <action
+            android:id="@+id/action_shoeListingScreenFragment_to_loginScreenFragment2"
+            app:destination="@id/loginScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailAddingNewShoeFragment"
+        android:name="com.udacity.shoestore.ui.ShoeDetailAddingNewShoeFragment"
+        android:label="fragment_shoe_detail_adding_new_shoe"
+        tools:layout="@layout/fragment_shoe_detail_adding_new_shoe" >
+
+    </fragment>
+</navigation>
